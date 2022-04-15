@@ -5,6 +5,7 @@ export default {
             format: 'esm',
             ext: 'mjs',
             input: './src',
+            outDir: './lib',
             declaration: true
         },
         {
@@ -12,6 +13,7 @@ export default {
             format: 'cjs',
             ext: 'cjs',
             input: './src',
+            outDir: './lib',
             declaration: true
         }
     ]
