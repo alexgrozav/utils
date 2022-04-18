@@ -1,4 +1,4 @@
-import { getValueByPath } from '../index';
+import { getValueByPath, setValueByPath } from '../index';
 
 describe('Helpers', () => {
     describe('getValueByPath()', () => {
@@ -40,6 +40,38 @@ describe('Helpers', () => {
             const path = 'other.other';
 
             expect(getValueByPath(object, path)).toEqual(undefined);
+        });
+    });
+
+    describe('setValueByPath()', () => {
+        let object: Record<string, any>;
+
+        beforeEach(() => {
+            object = {
+                id: '1',
+                name: 'Richard Hendricks',
+                address: {
+                    city: 'Palo Alto',
+                    state: 'California',
+                    country: 'United States'
+                }
+            };
+        });
+
+        it('should set root path key', () => {
+            const path = 'name';
+            const value = 'John Doe';
+
+            setValueByPath(object, path, value);
+            expect(object.name).toEqual(value);
+        });
+
+        it('should set nested path key', () => {
+            const path = 'address.city';
+            const value = 'New York';
+
+            setValueByPath(object, path, value);
+            expect(object.address.city).toEqual(value);
         });
     });
 });

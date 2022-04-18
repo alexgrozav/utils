@@ -20,8 +20,14 @@ export function getValueByPath (object: any, path: string): any {
  * @param value
  * @returns {T}
  */
-export function setValueByPath (object: any, path: string, key: string, value: any): any { // eslint-disable-line max-params
-    getValueByPath(object, path)[key] = value;
+export function setValueByPath (object: any, path: string, value: any): any {
+    const parts = path.split('.');
+    const key = parts.pop();
+    const target = parts.length > 0 ? getValueByPath(object, parts.join('.')) : object;
+
+    if (target && key) {
+        target[key] = value;
+    }
 
     return object;
 }
