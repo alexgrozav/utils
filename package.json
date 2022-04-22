@@ -14,6 +14,20 @@
     "postrelease": "ts-node scripts/postrelease.ts",
     "postversion": "ts-node scripts/postversion.ts"
   },
+  "main": "index.cjs",
+  "module": "index.mjs",
+  "jsdelivr": "index.cjs",
+  "unpkg": "index.cjs",
+  "types": "index.d.ts",
+  "files": ["**/*"],
+  "exports": {
+    ".": {
+      "require": "./index.cjs",
+      "import": "./index.mjs",
+      "types": "./index.d.ts"
+    },
+    "./*": "./*"
+  },
   "devDependencies": {
     "@grozav/eslint-config": "1.0.0",
     "@types/shelljs": "0.8.11",
