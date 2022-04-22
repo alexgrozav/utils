@@ -1,6 +1,6 @@
 {
   "name": "@grozav/utils",
-  "version": "1.0.2",
+  "version": "1.1.0",
   "scripts": {
     "dev": "vite",
     "build": "unbuild",
@@ -19,7 +19,9 @@
   "jsdelivr": "index.cjs",
   "unpkg": "index.cjs",
   "types": "index.d.ts",
-  "files": ["**/*"],
+  "files": [
+    "**/*"
+  ],
   "exports": {
     ".": {
       "require": "./index.cjs",
