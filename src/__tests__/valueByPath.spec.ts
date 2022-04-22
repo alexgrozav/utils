@@ -73,5 +73,13 @@ describe('Helpers', () => {
             setValueByPath(object, path, value);
             expect(object.address.city).toEqual(value);
         });
+
+        it('should set nested path key and create object at path', () => {
+            const path = 'other.path';
+            const value = 'New York';
+
+            setValueByPath(object, path, value);
+            expect(object.other.path).toEqual(value);
+        });
     });
 });

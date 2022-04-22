@@ -16,14 +16,22 @@ export function getValueByPath (object: any, path: string): any {
  *
  * @param object
  * @param path
- * @param key
  * @param value
+ * @param initialize
  * @returns {T}
  */
-export function setValueByPath<T = Record<string, any>> (object: T, path: string, value: any): T {
+export function setValueByPath (object: Record<string, any>, path: string, value: any, initialize = true): Record<string, any> {
     const parts = path.split('.');
     const key = parts.pop();
-    const target = parts.length > 0 ? getValueByPath(object, parts.join('.')) : object;
+
+    let target = object;
+    parts.forEach((part) => {
+        if (!target.hasOwnProperty(part) && initialize) {
+            target[part] = {};
+        }
+
+        target = target[part];
+    });
 
     if (target && key) {
         target[key] = value;
