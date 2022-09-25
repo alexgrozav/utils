@@ -44,5 +44,55 @@
     "unbuild": "0.7.4",
     "vite": "^2.9.2",
     "vitest": "0.9.3"
-  }
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alexgrozav/utils.git"
+  },
+  "funding": {
+    "type": "github",
+    "url": "https://github.com/sponsors/alexgrozav"
+  },
+  "bugs": {
+    "url": "https://github.com/alexgrozav/utils/issues"
+  },
+  "keywords": [
+    "ui",
+    "ux",
+    "dx",
+    "utilities",
+    "addClass",
+    "capitalizeFirst",
+    "clone",
+    "debounce",
+    "filterKeys",
+    "focusAttempt",
+    "focusFirstDescendant",
+    "focusLastDescendant",
+    "getStyleProperty",
+    "hasClass",
+    "hashString",
+    "isFocusable",
+    "isFunction",
+    "isKey",
+    "isMobile",
+    "isVisible",
+    "markSearchString",
+    "memoize",
+    "off",
+    "on",
+    "once",
+    "query",
+    "removeClass",
+    "slugify",
+    "sortByPath",
+    "toCamelCase",
+    "toDashCase",
+    "toUnderscoreCase",
+    "triggerEvent",
+    "trim",
+    "uid",
+    "valueByPath"
+  ]
 }
