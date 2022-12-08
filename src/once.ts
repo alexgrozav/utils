@@ -1,7 +1,7 @@
 import { off } from './off';
 import { on } from './on';
 
-export const once = function (el: HTMLElement, event: string, fn: any): void {
+export const once = function (el: HTMLElement | Document | Window, event: string, fn: any): void {
     const listener = function (...args: any[]) {
         if (fn) {
             // @ts-ignore
