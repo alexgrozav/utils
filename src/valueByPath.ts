@@ -49,15 +49,15 @@ export function setValueByPath (object: Record<string, any>, path: string, value
  * @returns {T}
  */
 export function setValuesAlongPath<T = Record<string, any>> (object: T, path: string, values: any): T {
-    const parts = path.split('.');
+    if (path) {
+        path.split('.').reduce((acc, part) => {
+            Object.keys(values).forEach((key) => {
+                acc[part][key] = values[key];
+            });
 
-    parts.reduce((acc, part) => {
-        Object.keys(values).forEach((key) => {
-            acc[part][key] = values[key];
-        });
-
-        return acc && acc[part];
-    }, object as Record<string, any>);
+            return acc && acc[part];
+        }, object as Record<string, any>);
+    }
 
     Object.keys(values).forEach((key) => {
         (object as Record<string, any>)[key] = values[key];

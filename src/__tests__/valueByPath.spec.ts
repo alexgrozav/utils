@@ -1,4 +1,4 @@
-import { getValueByPath, setValueByPath } from '../index';
+import {getValueByPath, setValueByPath, setValuesAlongPath} from '../index';
 
 describe('Helpers', () => {
     describe('getValueByPath()', () => {
@@ -80,6 +80,51 @@ describe('Helpers', () => {
 
             setValueByPath(object, path, value);
             expect(object.other.path).toEqual(value);
+        });
+    });
+
+    describe('setValuesAlongPath()', () => {
+        let object: Record<string, any>;
+        const values = {
+            a: 1,
+            b: 2
+        };
+
+        beforeEach(() => {
+            object = {
+                id: '1',
+                name: 'Richard Hendricks',
+                address: {
+                    city: 'Palo Alto',
+                    state: 'California',
+                    country: 'United States',
+                    meta: {}
+                }
+            };
+        });
+
+        it('should set root path values', () => {
+            const path = '';
+
+            setValuesAlongPath(object, path, values);
+            expect(object).toHaveProperty('a', values.a);
+            expect(object).toHaveProperty('b', values.b);
+        });
+
+        it('should set path values', () => {
+            const path = 'address';
+
+            setValuesAlongPath(object, path, values);
+            expect(object.address).toHaveProperty('a', values.a);
+            expect(object.address).toHaveProperty('b', values.b);
+        });
+
+        it('should set nested path values', () => {
+            const path = 'address.meta';
+
+            setValuesAlongPath(object, path, values);
+            expect(object.address.meta).toHaveProperty('a', values.a);
+            expect(object.address.meta).toHaveProperty('b', values.b);
         });
     });
 });
