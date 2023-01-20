@@ -9,8 +9,10 @@ describe('Helpers', () => {
                 tabIndex: null,
                 disabled: false,
                 nodeName: 'A',
-                getAttribute () { return element.tabIndex; },
-                focus () {}
+                getAttribute() {
+                    return element.tabIndex;
+                },
+                focus() {}
             } as any;
         });
 
@@ -71,7 +73,7 @@ describe('Helpers', () => {
             expect(isFocusable(element)).toEqual(false);
         });
 
-        it('should return false if element is <a>, and doesn\'t have href', () => {
+        it("should return false if element is <a>, and doesn't have href", () => {
             element.nodeName = 'A';
             element.href = null;
 

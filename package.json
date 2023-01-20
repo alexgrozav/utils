@@ -1,101 +1,101 @@
 {
-  "name": "@grozav/utils",
-  "version": "1.1.6",
-  "scripts": {
-    "dev": "vite",
-    "build": "unbuild",
-    "postbuild": "ts-node scripts/postbuild.ts",
-    "test": "vitest run",
-    "test:ci": "vitest run --coverage",
-    "test:dev": "vitest",
-    "lint": "eslint --ext .vue,.ts,.tsx,.js,.jsx src",
-    "lint:prettier": "prettier --write --loglevel warn \"**/*.{js,json}\"",
-    "prerelease": "npm-run-all test build",
-    "release": "np",
-    "postrelease": "ts-node scripts/postrelease.ts",
-    "postversion": "ts-node scripts/postversion.ts"
-  },
-  "main": "index.js",
-  "module": "index.mjs",
-  "jsdelivr": "index.js",
-  "unpkg": "index.js",
-  "types": "index.d.ts",
-  "files": [
-    "**/*"
-  ],
-  "exports": {
-    ".": {
-      "require": "./index.js",
-      "import": "./index.mjs",
-      "types": "./index.d.ts"
+    "name": "@grozav/utils",
+    "version": "1.1.6",
+    "scripts": {
+        "dev": "vite",
+        "build": "unbuild",
+        "postbuild": "ts-node scripts/postbuild.ts",
+        "test": "vitest run",
+        "test:ci": "vitest run --coverage",
+        "test:dev": "vitest",
+        "lint": "eslint --ext .vue,.ts,.tsx,.js,.jsx src",
+        "lint:prettier": "prettier --write --loglevel warn \"**/*.{ts,js,json}\"",
+        "prerelease": "npm-run-all test build",
+        "release": "np",
+        "postrelease": "ts-node scripts/postrelease.ts",
+        "postversion": "ts-node scripts/postversion.ts"
     },
-    "./*": "./*"
-  },
-  "devDependencies": {
-    "@grozav/eslint-config": "^1.1.4",
-    "@types/shelljs": "0.8.11",
-    "c8": "^7.11.0",
-    "eslint": "8.13.0",
-    "jsdom": "^19.0.0",
-    "np": "7.6.1",
-    "npm-run-all": "4.1.5",
-    "prettier": "^2.8.3",
-    "shelljs": "0.8.5",
-    "ts-node": "10.7.0",
-    "typescript": "^4.5.4",
-    "unbuild": "0.7.4",
-    "vite": "^2.9.2",
-    "vitest": "0.9.3"
-  },
-  "license": "MIT",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/alexgrozav/utils.git"
-  },
-  "funding": {
-    "type": "github",
-    "url": "https://github.com/sponsors/alexgrozav"
-  },
-  "bugs": {
-    "url": "https://github.com/alexgrozav/utils/issues"
-  },
-  "keywords": [
-    "ui",
-    "ux",
-    "dx",
-    "utilities",
-    "addClass",
-    "capitalizeFirst",
-    "clone",
-    "debounce",
-    "eventBus",
-    "filterKeys",
-    "focusAttempt",
-    "focusFirstDescendant",
-    "focusLastDescendant",
-    "getStyleProperty",
-    "hasClass",
-    "hashString",
-    "isFocusable",
-    "isFunction",
-    "isKey",
-    "isMobile",
-    "isVisible",
-    "markSearchString",
-    "memoize",
-    "off",
-    "on",
-    "once",
-    "query",
-    "removeClass",
-    "slugify",
-    "sortByPath",
-    "toCamelCase",
-    "toDashCase",
-    "toUnderscoreCase",
-    "triggerEvent",
-    "trim",
-    "uid",
-    "valueByPath"
-  ]
+    "main": "index.js",
+    "module": "index.mjs",
+    "jsdelivr": "index.js",
+    "unpkg": "index.js",
+    "types": "index.d.ts",
+    "files": [
+        "**/*"
+    ],
+    "exports": {
+        ".": {
+            "require": "./index.js",
+            "import": "./index.mjs",
+            "types": "./index.d.ts"
+        },
+        "./*": "./*"
+    },
+    "devDependencies": {
+        "@grozav/eslint-config": "^1.1.4",
+        "@types/shelljs": "0.8.11",
+        "c8": "^7.11.0",
+        "eslint": "8.13.0",
+        "jsdom": "^19.0.0",
+        "np": "7.6.1",
+        "npm-run-all": "4.1.5",
+        "prettier": "^2.8.3",
+        "shelljs": "0.8.5",
+        "ts-node": "10.7.0",
+        "typescript": "^4.5.4",
+        "unbuild": "0.7.4",
+        "vite": "^2.9.2",
+        "vitest": "0.9.3"
+    },
+    "license": "MIT",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/alexgrozav/utils.git"
+    },
+    "funding": {
+        "type": "github",
+        "url": "https://github.com/sponsors/alexgrozav"
+    },
+    "bugs": {
+        "url": "https://github.com/alexgrozav/utils/issues"
+    },
+    "keywords": [
+        "ui",
+        "ux",
+        "dx",
+        "utilities",
+        "addClass",
+        "capitalizeFirst",
+        "clone",
+        "debounce",
+        "eventBus",
+        "filterKeys",
+        "focusAttempt",
+        "focusFirstDescendant",
+        "focusLastDescendant",
+        "getStyleProperty",
+        "hasClass",
+        "hashString",
+        "isFocusable",
+        "isFunction",
+        "isKey",
+        "isMobile",
+        "isVisible",
+        "markSearchString",
+        "memoize",
+        "off",
+        "on",
+        "once",
+        "query",
+        "removeClass",
+        "slugify",
+        "sortByPath",
+        "toCamelCase",
+        "toDashCase",
+        "toUnderscoreCase",
+        "triggerEvent",
+        "trim",
+        "uid",
+        "valueByPath"
+    ]
 }

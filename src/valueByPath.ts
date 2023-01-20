@@ -5,7 +5,7 @@
  * @param path
  * @returns {T}
  */
-export function getValueByPath (object: any, path: string): any {
+export function getValueByPath(object: any, path: string): any {
     return path.split('.').reduce((acc, part) => {
         return acc && acc[part];
     }, object);
@@ -20,7 +20,12 @@ export function getValueByPath (object: any, path: string): any {
  * @param initialize
  * @returns {T}
  */
-export function setValueByPath (object: Record<string, any>, path: string, value: any, initialize = true): Record<string, any> {
+export function setValueByPath(
+    object: Record<string, any>,
+    path: string,
+    value: any,
+    initialize = true
+): Record<string, any> {
     const parts = path.split('.');
     const key = parts.pop();
 
@@ -48,7 +53,11 @@ export function setValueByPath (object: Record<string, any>, path: string, value
  * @param values
  * @returns {T}
  */
-export function setValuesAlongPath<T = Record<string, any>> (object: T, path: string, values: any): T {
+export function setValuesAlongPath<T = Record<string, any>>(
+    object: T,
+    path: string,
+    values: any
+): T {
     if (path) {
         path.split('.').reduce((acc, part) => {
             Object.keys(values).forEach((key) => {

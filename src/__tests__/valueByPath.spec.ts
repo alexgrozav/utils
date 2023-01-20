@@ -1,4 +1,4 @@
-import {getValueByPath, setValueByPath, setValuesAlongPath} from '../index';
+import { getValueByPath, setValueByPath, setValuesAlongPath } from '../index';
 
 describe('Helpers', () => {
     describe('getValueByPath()', () => {

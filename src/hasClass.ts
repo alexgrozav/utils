@@ -5,7 +5,7 @@
  * @param className
  * @returns {boolean}
  */
-export function hasClass (element: HTMLElement, className: string): boolean {
+export function hasClass(element: HTMLElement, className: string): boolean {
     if (!element || !className) return false;
     if (className.indexOf(' ') !== -1) throw new Error('Class name should not contain spaces.');
 

@@ -1,10 +1,18 @@
-export function removeEventListenerBinding (element: HTMLElement | Document | Window, event: string, handler: any): void {
+export function removeEventListenerBinding(
+    element: HTMLElement | Document | Window,
+    event: string,
+    handler: any
+): void {
     if (element && event) {
         element.removeEventListener(event, handler, false);
     }
 }
 
-export function detachEventBinding (element: HTMLElement | Document | Window, event: string, handler: any): void {
+export function detachEventBinding(
+    element: HTMLElement | Document | Window,
+    event: string,
+    handler: any
+): void {
     if (element && event) {
         (element as any).detachEvent('on' + event, handler);
     }

@@ -7,7 +7,9 @@ describe('Helpers', () => {
         });
 
         it('should convert string from underscore case to camel case', () => {
-            expect(toCamelCase('example_underscore_case', 'underscore')).toEqual('exampleUnderscoreCase');
+            expect(toCamelCase('example_underscore_case', 'underscore')).toEqual(
+                'exampleUnderscoreCase'
+            );
         });
     });
 });

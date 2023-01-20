@@ -43,7 +43,9 @@ describe('Helpers', () => {
         });
 
         it('should return item if componentInstance.$children[0] matches given name', () => {
-            expect(querySelector(items, '7')).toEqual((items[7] as any).componentInstance.$children[0]);
+            expect(querySelector(items, '7')).toEqual(
+                (items[7] as any).componentInstance.$children[0]
+            );
         });
 
         it('should return undefined if item below given search depth', () => {
@@ -101,7 +103,9 @@ describe('Helpers', () => {
         });
 
         it('should return array containing item if componentInstance.$children[0] matches given name', () => {
-            expect(querySelectorAll(items, '7')).toEqual([(items[7] as any).componentInstance.$children[0]]);
+            expect(querySelectorAll(items, '7')).toEqual([
+                (items[7] as any).componentInstance.$children[0]
+            ]);
         });
 
         it('should return array containing undefined if item below given search depth', () => {

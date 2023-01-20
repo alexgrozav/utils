@@ -75,7 +75,7 @@ describe('Helpers', () => {
             it('should trigger an event of type MouseEvents', () => {
                 const eventName = 'mousemove';
                 const eventType = 'MouseEvents';
-                const spy = vi.spyOn((element as any), 'fireEvent');
+                const spy = vi.spyOn(element as any, 'fireEvent');
 
                 const event = document.createEvent(eventType);
                 event.initEvent(eventName);
@@ -89,7 +89,7 @@ describe('Helpers', () => {
             it('should trigger an event of type KeyboardEvent', () => {
                 const eventName = 'keypress';
                 const eventType = 'KeyboardEvent';
-                const spy = vi.spyOn((element as any), 'fireEvent');
+                const spy = vi.spyOn(element as any, 'fireEvent');
 
                 const event = document.createEvent(eventType);
                 event.initEvent(eventName);
@@ -103,7 +103,7 @@ describe('Helpers', () => {
             it('should trigger an event of type HTMLEvents', () => {
                 const eventName = 'other';
                 const eventType = 'HTMLEvents';
-                const spy = vi.spyOn((element as any), 'fireEvent');
+                const spy = vi.spyOn(element as any, 'fireEvent');
 
                 const event = document.createEvent(eventType);
                 event.initEvent(eventName);

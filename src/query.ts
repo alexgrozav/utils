@@ -12,16 +12,19 @@
  * @param currentDepth
  * @returns {Array}
  */
-export function querySelector (items: any[], name: string, maxDepth = 3, currentDepth = 0): any {
+export function querySelector(items: any[], name: string, maxDepth = 3, currentDepth = 0): any {
     let result;
 
     for (const item of items) {
-        const children = item.$children || (item.componentInstance || {}).$children || item.children;
+        const children =
+            item.$children || (item.componentInstance || {}).$children || item.children;
 
-        if ((item.$options || {}).name === name ||
+        if (
+            (item.$options || {}).name === name ||
             ((item.$options || {}).extends || {}).name === name ||
             ((item.componentInstance || {}).$options || {}).name === name ||
-            (((item.componentInstance || {}).$options || {}).extends || {}).name === name) {
+            (((item.componentInstance || {}).$options || {}).extends || {}).name === name
+        ) {
             result = item;
         }
 
@@ -49,18 +52,28 @@ export function querySelector (items: any[], name: string, maxDepth = 3, current
  * @param currentDepth
  * @returns {Array}
  */
-export function querySelectorAll (items: any[], name: string, maxDepth = 3, currentDepth = 0): any[] {
+export function querySelectorAll(
+    items: any[],
+    name: string,
+    maxDepth = 3,
+    currentDepth = 0
+): any[] {
     let results: any[] = [];
 
-    if (!items) { return results; }
+    if (!items) {
+        return results;
+    }
 
     for (const item of items) {
-        const children = item.$children || (item.componentInstance || {}).$children || item.children;
+        const children =
+            item.$children || (item.componentInstance || {}).$children || item.children;
 
-        if ((item.$options || {}).name === name ||
+        if (
+            (item.$options || {}).name === name ||
             ((item.$options || {}).extends || {}).name === name ||
             ((item.componentInstance || {}).$options || {}).name === name ||
-            (((item.componentInstance || {}).$options || {}).extends || {}).name === name) {
+            (((item.componentInstance || {}).$options || {}).extends || {}).name === name
+        ) {
             results.push(item);
         }
 

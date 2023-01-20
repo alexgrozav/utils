@@ -6,7 +6,7 @@ import { focusAttempt } from './focusAttempt';
  * @param element DOM node for which to find the first focusable descendant.
  * @returns true if a focusable element is found and focus is set.
  */
-export function focusFirstDescendant (element: HTMLElement): boolean {
+export function focusFirstDescendant(element: HTMLElement): boolean {
     for (let i = 0; i < element.childNodes.length; i++) {
         const child = element.childNodes[i];
 

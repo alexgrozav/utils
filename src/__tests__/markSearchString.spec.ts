@@ -19,9 +19,7 @@ describe('Helpers', () => {
             const text = 'The orange said hello to the red.';
             const query = 'fox';
 
-            expect(markSearchString(text, query)).toEqual([
-                { text }
-            ]);
+            expect(markSearchString(text, query)).toEqual([{ text }]);
         });
     });
 });

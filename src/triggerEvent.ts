@@ -7,7 +7,11 @@
  * @param {String} name
  * @param rawOptions
  */
-export function triggerEvent (element: HTMLElement | Document | Window, name: string, rawOptions?: any) {
+export function triggerEvent(
+    element: HTMLElement | Document | Window,
+    name: string,
+    rawOptions?: any
+) {
     if (typeof window === 'undefined') {
         return;
     }

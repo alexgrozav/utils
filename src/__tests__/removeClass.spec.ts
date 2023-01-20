@@ -19,7 +19,7 @@ describe('Helpers', () => {
                 } as HTMLElement;
             });
 
-            it('should not remove class if class doesn\'t exist', () => {
+            it("should not remove class if class doesn't exist", () => {
                 element.className = 'other';
 
                 removeClass(element, 'test');
@@ -66,7 +66,7 @@ describe('Helpers', () => {
             beforeEach(() => {
                 element = {
                     classList: {
-                        remove () {}
+                        remove() {}
                     }
                 } as HTMLElement;
             });

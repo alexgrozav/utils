@@ -8,7 +8,7 @@ import { toDashCase } from './toDashCase';
  * @param breakpoint
  * @returns {string}
  */
-export function breakpointClass (className: string, breakpoint: string | number): string {
+export function breakpointClass(className: string, breakpoint: string | number): string {
     if (['string', 'number'].indexOf(typeof breakpoint) > -1 && breakpoint !== '') {
         return `${toDashCase(className)}-${breakpoint}`;
     }

@@ -1,4 +1,4 @@
-export function slugify (string: string): string {
+export function slugify(string: string): string {
     return string
         .toLowerCase()
         .replace(/\s+/g, '-') // Replace spaces with -

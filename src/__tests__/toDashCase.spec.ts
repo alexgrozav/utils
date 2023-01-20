@@ -7,7 +7,9 @@ describe('Helpers', () => {
         });
 
         it('should convert string from underscore case to dash case', () => {
-            expect(toDashCase('example_underscore_case', 'underscore')).toEqual('example-underscore-case');
+            expect(toDashCase('example_underscore_case', 'underscore')).toEqual(
+                'example-underscore-case'
+            );
         });
     });
 });

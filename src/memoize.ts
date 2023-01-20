@@ -1,6 +1,6 @@
 type MemoizeableFunction<P, R> = (...props: P[]) => R;
 
-export function memoize<P, R> (
+export function memoize<P, R>(
     fn: MemoizeableFunction<P, R>,
     serializeFn: (...args: P[]) => string = (...args: P[]) => JSON.stringify(args)
 ): MemoizeableFunction<P, R> {

@@ -7,7 +7,7 @@
  * @param delay
  * @returns {Function}
  */
-export function debounce (fn: any, delay: number) {
+export function debounce(fn: any, delay: number) {
     let inDebounce: any;
 
     return function (...args: any[]) {
