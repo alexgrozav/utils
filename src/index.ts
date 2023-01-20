@@ -4,6 +4,7 @@ export * from './capitalizeFirst';
 export * from './clone';
 export * from './constants';
 export * from './debounce';
+export * from './eventBus';
 export * from './filterKeys';
 export * from './focusAttempt';
 export * from './focusFirstDescendant';
