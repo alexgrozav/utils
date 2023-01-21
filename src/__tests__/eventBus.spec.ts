@@ -1,5 +1,4 @@
-import { on, addEventListenerBinding, attachEventBinding, _on } from '../index';
-import createEventBus from '../eventBus';
+import { createEventBus } from '../eventBus';
 
 describe('Helpers', () => {
     describe('createEventBus()', () => {
