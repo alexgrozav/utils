@@ -2,7 +2,7 @@ export type CallbackFn = (...args: any[]) => any;
 
 export type UnregisterFn = () => void;
 
-export default function createEventBus() {
+export function createEventBus() {
     const handlers = new Map<string, CallbackFn[]>();
 
     function on(eventName: string, fn: CallbackFn): UnregisterFn {
