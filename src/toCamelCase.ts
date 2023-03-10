@@ -1,5 +1,3 @@
-export function toCamelCase(string: string, from = 'dash'): string {
-    const regExp = from === 'dash' ? /-([a-z0-9])/g : /_([a-z0-9])/g;
-
-    return string.replace(regExp, (match, p) => p.toUpperCase());
+export function toCamelCase(string: string): string {
+    return string.replace(/[-_]([a-z0-9])/g, (match, p) => p.toUpperCase());
 }

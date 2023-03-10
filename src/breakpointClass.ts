@@ -1,4 +1,4 @@
-import { toDashCase } from './toDashCase';
+import { toKebabCase } from './toKebabCase';
 
 /**
  * Convert given class name into dash case and append the given breakpoint string. Required in order to turn camel case
@@ -10,8 +10,8 @@ import { toDashCase } from './toDashCase';
  */
 export function breakpointClass(className: string, breakpoint: string | number): string {
     if (['string', 'number'].indexOf(typeof breakpoint) > -1 && breakpoint !== '') {
-        return `${toDashCase(className)}-${breakpoint}`;
+        return `${toKebabCase(className)}-${breakpoint}`;
     }
 
-    return toDashCase(className);
+    return toKebabCase(className);
 }
