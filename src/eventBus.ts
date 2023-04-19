@@ -43,3 +43,5 @@ export function createEventBus() {
         emit
     };
 }
+
+export type EventBus = ReturnType<typeof createEventBus>;
